@@ -1,8 +1,9 @@
 package com.example.ayuyin;
 
-import android.os.Bundle;
 import android.app.Activity;
-import android.view.Menu;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends Activity {
 
@@ -12,11 +13,16 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
-		return true;
+	//the function by button of the pregnant mother
+	public void preMother(View view) {
+		Intent iPre = new Intent(MainActivity.this,PreMother.class);
+		startActivity(iPre);
+	}
+	
+	//the function by button of the baby mother
+	public void babyMother(View view) {
+		Intent iBaby = new Intent(MainActivity.this,BabyMother.class);
+		startActivity(iBaby);
 	}
 
 }
